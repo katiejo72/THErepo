@@ -9,3 +9,19 @@ def neweach(array)
 end
 
 neweach(array) {|color| puts color}
+
+
+num = 5, 56, 34, 17, 22, 39, 44, 101, 77
+
+#map, select, reduce
+
+#map
+puts num.map {|digit| digit * 2}
+
+#reduce
+
+puts num.reduce(5) {|sum,digit| sum + digit}
+
+#select
+
+puts num.select {|digit| digit.odd?}
