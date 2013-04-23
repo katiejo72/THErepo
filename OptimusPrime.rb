@@ -13,3 +13,10 @@
 #  Yuler.)
 #
 #******************************************************
+
+def findFactor(n)
+	#some mathy code goes here
+	
+end
+
+findFactor(13195)
