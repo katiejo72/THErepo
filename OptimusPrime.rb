@@ -41,6 +41,7 @@ class Primes
 		end
 
 		#find all the numbers stored in the array, primes, that are factors of n
+		#store the factors in a new array, factors
 		i = 0
 		v = 0
 		factors = Array.new
@@ -57,7 +58,7 @@ class Primes
 
 		end
 
-		#print the last number stored in the array
+		#print the last number stored in the factors array
 		puts factors[-1]
 
 		#primes.each {|nums| puts nums}
