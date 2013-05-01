@@ -28,19 +28,22 @@ class Primes
 
 	def findFactors
 		#find all the prime numbers up to the square root of n and store in an array, primes
-		x = 2
+#		x = 2
 		j = Math.sqrt(@n)
-		primes = Array.new
+		primes = []          #primes = Array.new
 	
-		while x <= j
+#		while x <= j
+#
+#			#if x.prime?
+#			#	primes << x      #primes.push(x)
+#			#end
+#
+#			x += 1
+#
+#		end
 
-			if x.prime?
-				primes.push(x)
-			end
-
-			x += 1
-
-		end
+		(2..j).each {|x| primes << x if x.prime?}
+		#primes << x if x.prime?   #doing the same as 37-39
 
 		#find all the numbers stored in the array, primes, that are factors of n
 		#store the factors in a new array, factors

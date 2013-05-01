@@ -28,37 +28,14 @@ class Primes
 
 	def findFactors
 		#find all the prime numbers up to the square root of n and store in an array, primes
-		x = 2
 		j = Math.sqrt(@n)
-		primes = Array.new
-	
-		while x <= j
-
-			if x.prime?
-				primes.push(x)
-			end
-
-			x += 1
-
-		end
+		primes = []
+		(2..j).each {|x| primes << x if x.prime?}
 
 		#find all the numbers stored in the array, primes, that are factors of n
 		#store the factors in a new array, factors
-		i = 0
-		v = 0
-		factors = Array.new
-
-		while i < primes.length
-
-			v = primes[i]
-			
-			if @n % v == 0
-				factors.push(v)
-			end
-
-			i += 1
-
-		end
+		factors = []			
+		primes.each {|v| factors << v if @n % v == 0}
 
 		#print the last number stored in the factors array
 		puts factors[-1]
